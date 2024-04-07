@@ -1,11 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-hdd="$(df -h | awk 'NR==4{print $3, $5}')"
-icon="💾"
-printf " %s %s \\n" "$icon" "$hdd"
-
-
-
-
-
-
+# Get the remaining disk space for the home folder
+df -h /home | awk 'NR==2 {print $4}'
