@@ -5,7 +5,7 @@ updatesaur="$(yay -Qum 2> /dev/null | wc -l)"
 updates=$(("$updatesarch" + "$updatesaur"))
 
 if [ "$updates" -eq 0 ]; then
-    echo "Updated"
+    echo "0"
 else
     echo -e " $updates"
 fi
